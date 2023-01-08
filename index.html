@@ -1,45 +1,88 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    
+
     <!------------------------ COR DA ABA MOBILE --------------------------->
     <meta name="theme-color" content="#000" />
     <meta name="apple-mobile-web-app-status-bar-style" content="#000" />
     <meta name="msapplication-navbutton-color" content="#000" />
-    
+
     <!------------------------ CSS  --------------------------->
     <link rel="stylesheet" href="/assets/css/style.css">
-    
+
     <!------------------------ GOOGLE FONTS --------------------------->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Changa:wght@200;300;600&family=Quicksand:wght@700&display=swap"
         rel="stylesheet">
-    
-    
+
+
     <!------------------------ FONT AWESOME --------------------------->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
         integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!------------------------  ICON --------------------------->
     <!-- <link rel="icon" type="image/jpg" href="/assets/img/icons/001-mulher-rosa-icon-16.png" /> -->
-    
+
     <title>Qual é o nome?</title>
 </head>
+
 <body>
     <div id="wrapper">
-        <h1> Você consegue advinhar a palavra?</h1>
+
+        <main>
+            <h1> Você consegue advinhar a palavra?</h1>
+
+            <div id="botoes">
+                <button class="btn" id="btn-start">Começar</button>
+            </div>
+
+            <nav>
+                <div class="temas" id="tema"> O tema é: <span class="cor-tema">Animal</span> </div>
+
+                <div class="alerta">
+                    <p>Você deve ligar o microfone antes de falar a palavra.</p>
+                </div>
+                
+                <div id="dica1" class="dicas"> Primeira dica: <span> 1</span></div>
+                <div id="dica2" class="dicas"> Segunda dica: <span>2 </span></div>
+                <div id="dica3" class="dicas"> Terceira dica: <span> 3</span></div>
+            </nav>
+
+            <div id="botoes">
+                <button class="btn" id="btn-on">Ligar microfone</button>
+            </div>
+        </main>
+
+        <!-- <div id="end">
+            <h1>GAME OVER!</h1>
+            
+            <div class="end__win">
+                <p class="end__win__mensagem">Você ganhou!</p>
+                <p class="end__win__resposta">A palavra correta era: <span id="resposta-certa"> X </span></p>
+                <p>Vamos ver se você acerta mais uma vez?</p>
+            </div>
+            
+            <div class="end__game-over">
+                <p class="end__game-over__mensagem">Você perdeu!</p>
+                <p class="end__game-over__resposta">A palavra correta era: <span id="resposta-errada"> X </span></p>
+                <p>Quem sabe na próxima você acerta</p>
+            </div>
+
+            <button class="btn jogar-novamente">Jogar novamente</button>
+        </div> -->
 
 
-        
     </div>
-    
+
     <!------------------------  SCRIPTS --------------------------->
     <script src="/assets/scripts/temas.js"></script>
     <script src="/assets/scripts/webSpeech.js"></script>
-    <!-- <script src="/assets/scripts/temas.js"></script> -->
+    <script src="/assets/scripts/main.js"></script>
 </body>
+
 </html>

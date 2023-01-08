@@ -73,8 +73,8 @@ console.log(randomElement)
 //     randomElement
 // }
 
-let palavra = "verde" // "resposta"
-semDica(palavra)
+// let palavra = "verde" // "resposta"
+// semDica(palavra)
 
 function semDica(palavra) {
     if (palavra === randomElement.nome) {
@@ -115,7 +115,7 @@ function gameover(palavra) {
 
 // ================ RECEBENDO RESPOSTA ================
 
-const resposta = document.getElementById("input-resposta").value
+// const resposta = document.getElementById("input-resposta").value
 
 // funcao que ative o microfone: converter audio em palavra e depois executar a funcao que verifica (funcao dicaX)
 
