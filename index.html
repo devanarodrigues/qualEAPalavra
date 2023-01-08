@@ -35,26 +35,32 @@
     <div id="wrapper">
 
         <main>
-            <h1> Você consegue advinhar a palavra?</h1>
+            <h1> Você consegue adivinhar a palavra?</h1>
 
-            <div id="botoes">
+            <div class="botoes" id="start">
                 <button class="btn" id="btn-start">Começar</button>
             </div>
 
-            <nav>
-                <div class="temas" id="tema"> O tema é: <span class="cor-tema">Animal</span> </div>
+            <nav class="disable">
+                <div class="temas" id="tema"> O tema é: <span class="cor-tema"></span> </div>
 
                 <div class="alerta">
                     <p>Você deve ligar o microfone antes de falar a palavra.</p>
                 </div>
-                
-                <div id="dica1" class="dicas"> Primeira dica: <span> 1</span></div>
-                <div id="dica2" class="dicas"> Segunda dica: <span>2 </span></div>
-                <div id="dica3" class="dicas"> Terceira dica: <span> 3</span></div>
+
+                <div id="resposta"></div>
+
+                <div id="container-dicas">
+
+                    <!-- <div id="dica1" class="dicas"> Primeira dica: <span> 1</span></div>
+                    <div id="dica2" class="dicas"> Segunda dica: <span>2 </span></div>
+                    <div id="dica3" class="dicas"> Terceira dica: <span> 3</span></div> -->
+                </div>
+
             </nav>
 
-            <div id="botoes">
-                <button class="btn" id="btn-on">Ligar microfone</button>
+            <div class="botoes">
+                <button class="btn disable" id="btn-on">Ligar microfone</button>
             </div>
         </main>
 
@@ -83,6 +89,8 @@
     <script src="/assets/scripts/temas.js"></script>
     <script src="/assets/scripts/webSpeech.js"></script>
     <script src="/assets/scripts/main.js"></script>
+    <script src="/assets/scripts/verificacao.js"></script>
+    <script src="/assets/scripts/dicas.js"></script>
 </body>
 
 </html>

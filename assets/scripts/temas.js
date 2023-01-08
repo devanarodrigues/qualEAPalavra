@@ -2,40 +2,46 @@ const temas = [
     {
         "tema": [
             {
+                "tema": "Animal",
                 "nome": "macaco",
                 "dica1": "inteligente",
                 "dica2": "teoria evolucao",
                 "dica3": "vive em florestas"
             },
             {
+                "tema": "Animal",
                 "nome": "galinha",
                 "dica1": "ave",
                 "dica2": "industria alimentar",
                 "dica3": "bota ovos"
             },
             {
+                "tema": "Animal",
                 "nome": "galinha",
                 "dica1": "ave",
                 "dica2": "industria alimentar",
                 "dica3": "bota ovos"
             }
-        ]
+        ], 
     },
     {
         "tema": [
             {
+                "tema": "Fruta",
                 "nome": "laranja",
                 "dica1": "acido",
                 "dica2": "arvore",
                 "dica3": "cor"
             },
             {
+                "tema": "Fruta",
                 "nome": "morango",
                 "dica1": "sementes",
                 "dica2": "fondue",
                 "dica3": "sensacao"
             },
             {
+                "tema": "Fruta",
                 "nome": "melancia",
                 "dica1": "nasce no chao",
                 "dica2": "muitas sementes dentro",
@@ -46,18 +52,21 @@ const temas = [
     {
         "tema": [
             {
+                "tema": "Cor",
                 "nome": "azul",
                 "dica1": "tranquilidade",
                 "dica2": "harmonia",
                 "dica3": "ceu"
             },
             {
+                "tema": "Cor",
                 "nome": "vermelho",
                 "dica1": "fogo",
                 "dica2": "paixao",
                 "dica3": "coracao"
             },
             {
+                "tema": "Cor",
                 "nome": "verde",
                 "dica1": "esperanca",
                 "dica2": "saude",
@@ -67,6 +76,7 @@ const temas = [
 ]
 const randomIndex = Math.floor(Math.random() * temas.length);
 const randomElement = temas[randomIndex].tema[randomIndex]; // console.log(temas[x].tema[x])
+const tema = randomElement.tema 
 console.log(randomElement)
 
 // function escolhendoPalavra (randomElement){
