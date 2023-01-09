@@ -10,14 +10,14 @@ const temas = [
             },
             {
                 "tema": "Animal",
-                "nome": "galinha",
+                "nome": "Galinha",
                 "dica1": "ave",
                 "dica2": "industria alimentar",
                 "dica3": "bota ovos"
             },
             {
                 "tema": "Animal",
-                "nome": "galinha",
+                "nome": "Galinha",
                 "dica1": "ave",
                 "dica2": "industria alimentar",
                 "dica3": "bota ovos"
@@ -28,21 +28,21 @@ const temas = [
         "tema": [
             {
                 "tema": "Fruta",
-                "nome": "laranja",
+                "nome": "Laranja",
                 "dica1": "acido",
                 "dica2": "arvore",
                 "dica3": "cor"
             },
             {
                 "tema": "Fruta",
-                "nome": "morango",
+                "nome": "Morango",
                 "dica1": "sementes",
                 "dica2": "fondue",
                 "dica3": "sensacao"
             },
             {
                 "tema": "Fruta",
-                "nome": "melancia",
+                "nome": "Melancia",
                 "dica1": "nasce no chao",
                 "dica2": "muitas sementes dentro",
                 "dica3": "magali"
@@ -53,21 +53,21 @@ const temas = [
         "tema": [
             {
                 "tema": "Cor",
-                "nome": "azul",
+                "nome": "Azul",
                 "dica1": "tranquilidade",
                 "dica2": "harmonia",
                 "dica3": "ceu"
             },
             {
                 "tema": "Cor",
-                "nome": "vermelho",
+                "nome": "Vermelho",
                 "dica1": "fogo",
                 "dica2": "paixao",
                 "dica3": "coracao"
             },
             {
                 "tema": "Cor",
-                "nome": "verde",
+                "nome": "Verde",
                 "dica1": "esperanca",
                 "dica2": "saude",
                 "dica3": "floresta"
@@ -77,6 +77,7 @@ const temas = [
 const randomIndex = Math.floor(Math.random() * temas.length);
 const randomElement = temas[randomIndex].tema[randomIndex]; // console.log(temas[x].tema[x])
 const tema = randomElement.tema 
+const palavraSecreta = randomElement.nome 
 console.log(randomElement)
 
 // function escolhendoPalavra (randomElement){
