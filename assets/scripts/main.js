@@ -18,10 +18,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
     `
 })
 
-btnComecar.addEventListener('click', ()=>{
+btnComecar.addEventListener('click', () => {
     nav.classList.remove('disable')
     btnOn.classList.remove('disable')
-    start.removeChild(btnComecar)
+    main.removeChild(start)
 
     h1.innerHTML = "Vamos lá"
 })
@@ -30,6 +30,7 @@ btnComecar.addEventListener('click', ()=>{
 btnOn.addEventListener('click', function (e) {
     recognition.start()
     console.log('recognition.start: Ready to receive a color command.')
+    btnOn.innerHTML = "<i class='fa-solid fa-microphone fa-beat-fade fa-2x' style='--fa-beat-fade-opacity: 0.67; --fa-beat-fade-scale: 1.075;color: red;'></i>"    
 })
 
 
@@ -40,24 +41,27 @@ btnOn.addEventListener('click', function (e) {
 // }
 
 
-recognition.addEventListener('soundstart', () =>{
+recognition.addEventListener('soundstart', () => {
     console.log('soundstart: Some sound is being received')
     h1.innerHTML = `CAPTURANDO SOM...`
+
+
 })
+
 
 
 recognition.onaudioend = () => {
     console.log('onaudioend: Speech has stopped being detected');
-    
-    h1.innerHTML = `Você consegue adivinhar a palavra?`
-    btnOn.innerHTML = `Ligar microfone`
+    btnOn.innerHTML = "<i class='fa-solid fa-microphone fa-2x'></i>"
 
-    recognition.onresult = (event) =>{
+    h1.innerHTML = `Vamos lá`
+
+    recognition.onresult = (event) => {
         resposta.innerHTML = ""
         resposta.innerHTML += `Você falou: ${event.results[0][0].transcript}`
-        if(containerDicas.contains(dica01)){
+        if (containerDicas.contains(dica01)) {
             verificaResposta2()
-        }else{
+        } else {
             verificaResposta()
         }
     }

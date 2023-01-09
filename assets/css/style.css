@@ -6,7 +6,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "century gothic", sans-serif;
+    font-family: "century gothic", "sarala", sans-serif;
     box-sizing: border-box;
     text-align: center;
 }
@@ -19,6 +19,12 @@
     flex-direction: column;
     background: radial-gradient(var(--turquesa), var(--bg));
     height: 100vh;
+}
+
+#start>p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    font-family: 'sarala', 'century gothic', sans-serif;
 }
 
 main {
@@ -34,20 +40,32 @@ h1 {
     font-size: 3rem;
     margin-bottom: 3rem;
 }
-#btn-start{
+
+#btn-start {
     width: 15rem;
     box-shadow: 0 0 25px var(--bg);
     transition: .3s;
 }
-#btn-start:hover{
+
+#btn-start:hover {
     transform: scale(1.2);
-    box-shadow: 0 0 25px white;
+    box-shadow: 0 0 15px white;
+}
+#btn-on{
+    transition: .3s;
+}
+#btn-on:hover{
+    transform: scale(1.2);
+    box-shadow: 0 0 10px red;
 }
 
 /*--======================= MAIN =======================--*/
-.alerta{
+.alerta {
     font-style: oblique;
+    font-family: "sarala", "century gothic", sans-serif;
+    font-weight: 400;
 }
+
 .btn {
     padding: 1rem 2rem;
     border-radius: .5rem;
@@ -61,8 +79,8 @@ h1 {
 
 .temas {
     font-size: 1.4rem;
-    font-family: "sarala", 'sans-serif';
-    font-weight: bold;
+    font-family: "sarala", "century gothic", sans-serif;
+    font-weight: 700;
     margin-bottom: 1rem;
     text-shadow: 0 0 20px black;
     border-radius: 10px;
@@ -76,11 +94,12 @@ h1 {
     font-size: 1.2rem;
     margin: .3rem 0;
 }
-#dica1{
+
+#dica1 {
     margin-top: 1rem;
 }
 
-#dica1 span{
+#dica1 span {
     color: blue;
 }
 
@@ -88,7 +107,7 @@ h1 {
     color: green;
 }
 
-#dica3 span{
+#dica3 span {
     color: rosybrown;
 }
 
@@ -131,10 +150,12 @@ p.end__game-over__resposta {
 #resposta-errada {
     color: red;
 }
-#end>div>p:nth-child(4){
+
+#end>div>p:nth-child(4) {
     font-size: 1rem;
     font-style: oblique;
 }
+
 .jogar-novamente {
     padding: .8rem 2rem;
     border-radius: .8rem;
