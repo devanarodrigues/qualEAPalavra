@@ -6,71 +6,56 @@ recognition.addEventListener('result', (event) => {
 
 })
 
-function verificaResposta(palavra) {
-    if (palavra === randomElement.nome) {
+
+
+function verificandoResposta(resposta) {
+
+    if (resposta !== palavraSecreta) {
+        containerDicas.innerHTML = dica1HTML
+    } else{
+        win()
+    }
+}
+
+function verificandoResposta2(resposta) {
+    if (resposta !== palavraSecreta) {
+        containerDicas.innerHTML += dica2HTML
+    }else{
+        win()
+    }
+}
+function verificandoResposta3(resposta) {
+    if (resposta !== palavraSecreta) {
+        containerDicas.innerHTML += dica3HTML
+    }else{
+        win()
+    }
+}
+function verificandoResposta4(resposta) {
+    if (resposta === palavraSecreta) {
         win()
     } else {
-        console.log(`DICA 1: ${randomElement.dica1}`)
-        containerDicas.innerHTML += `<div id="dica1" class="dicas"> Primeira dica: <span> ${randomElement.dica1}</span></div>`
-
-        btnComecar.addEventListener('click', verificaResposta2())
-    }
-}
-
-// verificaResposta2();
-function verificaResposta2(palavra) {
-    recognition.onaudioend = () => {
-
-        if (palavra === randomElement.nome) {
-            containerDicas.innerHTML = `Voce acertou, a palavra era ${randomElement.nome}`;
-            win()
-        } else {
-            console.log(`DICA 2: ${randomElement.dica2}`);
-            containerDicas.innerHTML += `<div id="dica2" class="dicas"> Segunda dica: <span> ${randomElement.dica2}</span></div>`;
-
-        }
-        btnComecar.addEventListener('click', verificaResposta3())
-    }
-}
-
-function verificaResposta3(palavra) {
-    recognition.onaudioend = () => {
-
-        if (palavra === randomElement.nome) {
-            containerDicas.innerHTML = `Voce acertou, a palavra era ${randomElement.nome}`;
-            win()
-        } else {
-            console.log(`DICA 3: ${randomElement.dica3}`);
-            containerDicas.innerHTML += `<div id="dica3" class="dicas"> Segunda dica: <span> ${randomElement.dica3}</span></div>`;
-
-            btnComecar.addEventListener('click', verificaRespostaFinal())
-        }
-    }
-}
-
-function verificaRespostaFinal(palavra) {
-    if (palavra === randomElement.nome) {
-        console.log(`Voce acertou, a palavra era ${randomElement.nome}`)
-        win()
-    } else {
-        containerDicas.innerHTML = `As dicas acabaram`
-        setTimeout(lose(), 3000)
+        lose()
     }
 }
 
 
+
+
+// ============= EXIBINDO PAGINA DE DERROTA ============= 
 function lose() {
     restart.classList.remove('some')
     restart.classList.remove('restart')
     wrapper.innerHTML = `
-            <div class='end__game-over'>
-                <p class='end__game-over__mensagem'>Você perdeu!</p>
-                <p class='end__game-over__resposta'>A palavra correta era: <span id='resposta-errada'> ${palavraSecreta} </span></p>
-                <p>Quem sabe na próxima você acerta</p>
-        <button class="btn" id="btn-restart">Recomecar </button>
-            </div>`
+    <div class='end__game-over'>
+    <p class='end__game-over__mensagem'>Você perdeu!</p>
+    <p class='end__game-over__resposta'>A palavra correta era: <span id='resposta-errada'> ${palavraSecreta} </span></p>
+    <p>Quem sabe na próxima você acerta</p>
+    <button class="btn" id="btn-restart">Recomecar </button>
+    </div>`
 }
 
+// ============= EXIBINDO PAGINA DE VITORIA ============= 
 function win() {
     wrapper.innerHTML = `<div id="end">
             <h1>GAME OVER!</h1>
