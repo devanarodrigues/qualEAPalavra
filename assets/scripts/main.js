@@ -31,8 +31,8 @@ btnOn.addEventListener('click', function (e) {
     recognition.start()
     console.log('recognition.start: Ready to receive a color command.')
     btnOn.innerHTML = "<i class='fa-solid fa-microphone fa-beat-fade fa-2x' style='--fa-beat-fade-opacity: 0.67; --fa-beat-fade-scale: 1.075;color: red;'></i>"
-    cont++
-    console.log(cont)
+    
+    console.log("start captura ", cont)
     console.log(palavraSecreta)
 })
 
@@ -40,6 +40,8 @@ btnOn.addEventListener('click', function (e) {
 // ============= DURANTE A CAPTURA DE AUDIO ============= 
 recognition.addEventListener('soundstart', () => {
     console.log('soundstart: Some sound is being received')
+    cont++
+    console.log("capturando", cont)
     h1.innerHTML = `CAPTURANDO SOM...`
     capturando = true
     console.log(palavraFalada)
