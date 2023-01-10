@@ -1,0 +1,3 @@
+quando a api nao consegue capturar o audio, ela incrementa o cont,
+e quando ela consegue capturar, 
+ela nao exibe a dica correta

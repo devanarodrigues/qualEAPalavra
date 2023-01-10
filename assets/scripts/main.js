@@ -42,6 +42,7 @@ recognition.addEventListener('soundstart', () => {
     console.log('soundstart: Some sound is being received')
     h1.innerHTML = `CAPTURANDO SOM...`
     capturando = true
+    console.log(palavraFalada)
 })
 
 
@@ -55,19 +56,21 @@ recognition.onaudioend = () => {
     // ============= RESULTADO DA CAPTURA DO AUDIO ============= 
     recognition.onresult = (event) => {
         palavraFalada = event.results[0][0].transcript[0].toUpperCase() + event.results[0][0].transcript.substring(1)
+        // console.log(palavraFalada)
         divResposta.innerHTML = ""
         divResposta.innerHTML += `Você falou: ${palavraFalada}`
+
+        if(cont === 1){
+            verificandoResposta(palavraFalada)
+        }else if(cont === 2){
+            verificandoResposta2(palavraFalada)
+        }else if (cont === 3){
+            verificandoResposta3(palavraFalada)
+        }else if (cont === 4){
+            verificandoResposta4(palavraFalada)
+        }
     }
     
     // ============= VERIFICANDO RESPOSTA CORRETA ============= 
-    if(cont === 1){
-        verificandoResposta(palavraFalada)
-    }else if(cont === 2){
-        verificandoResposta2(palavraFalada)
-    }else if (cont === 3){
-        verificandoResposta3(palavraFalada)
-    }else if (cont === 4){
-        verificandoResposta4(palavraFalada)
-    }
 }
 

@@ -104,15 +104,21 @@ h1 {
 }
 
 #dica1 span {
-    color: blue;
+    color: rgb(204, 0, 255);
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 #dica2 span {
-    color: green;
+    color: rgb(255, 25, 83);
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 #dica3 span {
-    color: rosybrown;
+    color: rgb(255, 0, 0);
+    font-weight: bold;
+    text-transform: capitalize;
 }
 
 /*--======================= ENG GAME =======================--*/
