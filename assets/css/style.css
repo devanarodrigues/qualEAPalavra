@@ -19,6 +19,8 @@
     flex-direction: column;
     background: radial-gradient(var(--turquesa), var(--bg));
     height: 100vh;
+    padding: 1rem;
+    overflow: hidden;
 }
 
 #start>p {
@@ -61,6 +63,9 @@ h1 {
 }
 .btn.some.restart {
     display: none;
+}
+.btn.restart {
+    display: auto;
 }
 
 /*--======================= MAIN =======================--*/
