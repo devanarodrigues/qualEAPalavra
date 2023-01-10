@@ -40,8 +40,7 @@ btnOn.addEventListener('click', function (e) {
 // ============= DURANTE A CAPTURA DE AUDIO ============= 
 recognition.addEventListener('soundstart', () => {
     console.log('soundstart: Some sound is being received')
-    cont++
-    console.log("capturando", cont)
+    
     h1.innerHTML = `CAPTURANDO SOM...`
     capturando = true
     console.log(palavraFalada)
@@ -59,6 +58,8 @@ recognition.onaudioend = () => {
     recognition.onresult = (event) => {
         palavraFalada = event.results[0][0].transcript[0].toUpperCase() + event.results[0][0].transcript.substring(1)
         // console.log(palavraFalada)
+        cont++
+        console.log("após resultado: ", cont)
         divResposta.innerHTML = ""
         divResposta.innerHTML += `Você falou: ${palavraFalada}`
 
