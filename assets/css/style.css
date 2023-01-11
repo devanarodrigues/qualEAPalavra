@@ -14,8 +14,8 @@
 }
 
 body {
-    background: rgb(106, 249, 216);
-    background: radial-gradient(circle, rgba(106, 249, 216, 1) 0%, rgba(0, 25, 83, 1) 100%);
+    background: rgb(53, 88, 255);
+    background: linear-gradient(90deg, rgba(53, 88, 255, 1) 0%, rgba(29, 222, 253, 0.4598214285714286) 50%, rgba(53, 88, 255, 1) 100%);
     overflow: hidden;
 }
 
