@@ -117,7 +117,7 @@ h1 {
     font-weight: 400;
     font-family: 'League Spartan';
     color: #000718;
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
 }
 .falada{
     font-family: 'League Spartan';
@@ -130,17 +130,14 @@ h1 {
 }
 
 #dica1 span {
-    color: rgb(5, 161, 0);
     font-weight: bold;
 }
 
 #dica2 span {
-    color: rgb(0, 60, 255);
     font-weight: bold;
 }
 
 #dica3 span {
-    color: rgb(32, 0, 83);
     font-weight: bold;
 }
 
