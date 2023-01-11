@@ -1,15 +1,5 @@
 const containerDicas = document.querySelector("#container-dicas")
 
-
-
-
-recognition.addEventListener('result', (event) => {
-    var resposta = event.results[0][0].transcript;
-
-})
-
-
-
 function verificandoResposta(resposta) {
 
     if (resposta !== palavraSecreta) {
@@ -41,9 +31,6 @@ function verificandoResposta4(resposta) {
     }
 }
 
-
-
-
 // ============= EXIBINDO PAGINA DE DERROTA ============= 
 const reload = document.createElement("button")
 reload.classList.add("btn")
@@ -52,30 +39,35 @@ reload.addEventListener("click", () => { window.location.reload(true) })
 
 function lose() {
     wrapper.innerHTML = `
-    <div class='end__game-over'>
     <h1>GAME OVER!</h1>
+    <div class='end__game-over'>
     
-    <p class='end__game-over__mensagem'>Você perdeu!</p>
-    <p class='end__game-over__resposta'>A palavra correta era: <span id='resposta-errada'> ${palavraSecreta} </span></p>
+        <p class='end__game-over__mensagem'>Você perdeu!</p>
+        <p class='end__game-over__resposta'>A palavra correta era: <span id='resposta-errada'> ${palavraSecreta} </span></p>
     
-    <p>Quem sabe na próxima você acerta</p>
+        <p>Quem sabe na próxima você acerta...</p>
     </div>`
 
+    animacaoLose()
     wrapper.appendChild(reload)
 }
+
+
 
 // ============= EXIBINDO PAGINA DE VITORIA ============= 
 function win() {
     wrapper.innerHTML = `<div id="end">
             <h1>GAME OVER!</h1>
-            
             <div class='end__win'>
                 <p class='end__win__mensagem'>Você ganhou!</p>
                 <p class='end__win__resposta'>A palavra correta era: <span id='resposta-certa'> ${palavraSecreta} </span></p>
 
                 <p>Vamos ver se você acerta mais uma vez?</p>
-                </div>`
+            </div>`
 
+    animacaoWin()
     wrapper.appendChild(reload)
 }
+
+
 

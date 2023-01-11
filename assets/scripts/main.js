@@ -9,7 +9,7 @@ const btnOn = document.getElementById('btn-on')
 const botoes = document.getElementsByClassName('botoes')
 const divResposta = document.querySelector("#resposta")
 const cliqueAbaixo = document.querySelector("#start > p")
-let eUndefinedOuNao = true
+let eUndefinedOuNao = false
 let palavraFalada
 let cont = 0
 
@@ -22,13 +22,7 @@ btnComecar.addEventListener('click', () => {
     h1.innerHTML = "Vamos lá"
 
     
-    h1.animate([
-        { transform: 'scale(4)', easing: 'cubic-bezier(.54,.21,.6,.88)'},
-        { transform: 'scale(1)', easing: 'cubic-bezier(.54,.21,.6,.88)' }
-    ],{
-        duration: 550,
-        iterations: 1
-    })    
+    vamosLaScale()    
 })
 
 // ============= EXIBINDO O TEMA ============= 
@@ -43,14 +37,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 btnOn.addEventListener('click', function (e) {
     recognition.start()
     h1.innerHTML= "Aguardando resposta..."
-
-    h1.animate([
-        {opacity: '.5', easing: 'cubic-bezier(.54,.21,.6,.88)' },{transform: 'scale(.8)'},
-        { opacity: '1', easing: 'cubic-bezier(.54,.21,.6,.88)' }, { transform: 'scale(1)' }
-    ], {
-        duration: 550,
-        iterations: 1
-    })  
+    aguardandoResposta()
 
     console.log('recognition.start: Ready to receive a color command.')
 
@@ -65,15 +52,7 @@ recognition.addEventListener('soundstart', () => {
     console.log('soundstart: Some sound is being received')
 
     h1.innerHTML = `CAPTURANDO ÁUDIO...`
-
-    h1.animate([
-        { opacity: '.5', easing: 'cubic-bezier(.54,.21,.6,.88)' },
-        { opacity: '1', easing: 'cubic-bezier(.54,.21,.6,.88)' },
-        { opacity: '.5', easing: 'cubic-bezier(.54,.21,.6,.88)' }
-    ], {
-        duration: 750,
-        iterations: 1
-    })
+    capturandoAudio()
 
     console.log(palavraFalada)
 })
@@ -81,27 +60,14 @@ recognition.addEventListener('soundstart', () => {
 
 // ============= FINAL DO AUDIO ============= 
 recognition.onaudioend = () => {
-    h1.animate([
-        { opacity: '.5', easing: 'cubic-bezier(.54,.21,.6,.88)' },
-        { opacity: '1', easing: 'cubic-bezier(.54,.21,.6,.88)' }
-    ], {
-        duration: 750,
-        iterations: 1
-    })
+    vamosLa()
     console.log('onaudioend: Speech has stopped being detected');
     btnOn.style.display = 'block'
     btnOn.innerHTML = "<i class='fa-solid fa-microphone fa-2x'></i>"
     console.log("antes do if",eUndefinedOuNao)
     if (eUndefinedOuNao === true) {
         h1.innerHTML = "Palavra não identificada. Fale novamente"
-
-        h1.animate([
-            { opacity: '.5', easing: 'cubic-bezier(.54,.21,.6,.88)' }, { transform: 'scale(.8)' },
-            { opacity: '1', easing: 'cubic-bezier(.54,.21,.6,.88)' }, { transform: 'scale(1)' }
-        ], {
-            duration: 550,
-            iterations: 1
-        })  
+        palavraNaoIdentificada()  
 
         divResposta.innerHTML = ""
     }else{
@@ -121,6 +87,7 @@ recognition.onaudioend = () => {
             divResposta.innerHTML = ""
             divResposta.innerHTML += `Você falou: ${palavraFalada}`
 
+            // ============= VERIFICANDO RESPOSTA CORRETA ============= 
             if (cont === 1) {
                 verificandoResposta(palavraFalada)
             } else if (cont === 2) {
@@ -131,10 +98,7 @@ recognition.onaudioend = () => {
                 verificandoResposta4(palavraFalada)
             }
         }
-        
-        
     }
-
-    // ============= VERIFICANDO RESPOSTA CORRETA ============= 
 }
+
 
