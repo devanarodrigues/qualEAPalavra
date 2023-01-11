@@ -14,8 +14,7 @@
 }
 
 body {
-    background: rgb(53, 88, 255);
-    background: linear-gradient(90deg, rgba(53, 88, 255, 1) 0%, rgba(29, 222, 253, 0.4598214285714286) 50%, rgba(53, 88, 255, 1) 100%);
+    background: #5d8aeb;
     overflow: hidden;
 }
 
