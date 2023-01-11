@@ -61,8 +61,8 @@ function vamosLa() {
 }
 function vamosLaScale() {
     h1.animate([
-        { transform: 'scale(4)', easing: 'cubic-bezier(.54,.21,.6,.88)' },
-        { transform: 'scale(1)', easing: 'cubic-bezier(.54,.21,.6,.88)' }
+        { transform: 'scale(4)', easing: 'cubic-bezier(.54,.21,.6,.88)', opacity: '0', easing: 'cubic-bezier(.54,.21,.6,.88)' },
+        { transform: 'scale(1)', easing: 'cubic-bezier(.54,.21,.6,.88)', opacity: '1', easing: 'cubic-bezier(.54,.21,.6,.88)' }
     ], {
         duration: 550,
         iterations: 1

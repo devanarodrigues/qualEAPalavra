@@ -6,14 +6,14 @@ const temas = [
                 "tema": "Animal",
                 "nome": "macaco",
                 "dica1": "inteligente",
-                "dica2": "teoria evolucao",
+                "dica2": "teoria evolução",
                 "dica3": "vive em florestas"
             },
             {
                 "tema": "Animal",
                 "nome": "Galinha",
                 "dica1": "ave",
-                "dica2": "industria alimentar",
+                "dica2": "indústria alimentar",
                 "dica3": "bota ovos"
             },
             {
@@ -22,6 +22,13 @@ const temas = [
                 "dica1": "gosta de ossos",
                 "dica2": "animal doméstico",
                 "dica3": "melhor amigo do homem"
+            },
+            {
+                "tema": "Animal",
+                "nome": "Gato",
+                "dica1": "rua",
+                "dica2": "animal doméstico",
+                "dica3": "mia"
             }
         ],
     },
@@ -30,8 +37,8 @@ const temas = [
             {
                 "tema": "Fruta",
                 "nome": "Laranja",
-                "dica1": "acido",
-                "dica2": "arvore",
+                "dica1": "ácido",
+                "dica2": "árvore",
                 "dica3": "cor"
             },
             {
@@ -39,14 +46,21 @@ const temas = [
                 "nome": "Morango",
                 "dica1": "sementes",
                 "dica2": "fondue",
-                "dica3": "sensacao"
+                "dica3": "sensação"
             },
             {
                 "tema": "Fruta",
                 "nome": "Melancia",
-                "dica1": "nasce no chao",
-                "dica2": "muitas sementes dentro",
-                "dica3": "magali"
+                "dica1": "nasce no chão",
+                "dica2": "magali",
+                "dica3": "muitas sementes dentro"
+            },
+            {
+                "tema": "Fruta",
+                "nome": "Limão",
+                "dica1": "nasce na árvore",
+                "dica2": "ácido",
+                "dica3": "limonada"
             }
         ]
     },
@@ -57,20 +71,20 @@ const temas = [
                 "nome": "Azul",
                 "dica1": "tranquilidade",
                 "dica2": "harmonia",
-                "dica3": "ceu"
+                "dica3": "céu"
             },
             {
                 "tema": "Cor",
                 "nome": "Vermelho",
                 "dica1": "fogo",
-                "dica2": "paixao",
-                "dica3": "coracao"
+                "dica2": "paixão",
+                "dica3": "coração"
             },
             {
                 "tema": "Cor",
                 "nome": "Verde",
-                "dica1": "esperanca",
-                "dica2": "saude",
+                "dica1": "esperança",
+                "dica2": "saúde",
                 "dica3": "floresta"
             }]
     }
