@@ -1,5 +1,5 @@
 function animacaoInicioH1(){
-    return h1.animate([
+    h1.animate([
         { transform: 'translateY(-400px)', easing: 'cubic-bezier(.54,.21,.6,.88)' },
         { transform: 'translateY(0px)', easing: 'cubic-bezier(.54,.21,.6,.88)' }
     ], {

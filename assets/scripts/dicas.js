@@ -5,10 +5,10 @@ const tema = temas[randomIndex]
 randomIndex = Math.floor(Math.random() * temas.length);
 const categoria = tema.categoria[randomIndex]
 
-const d1 = categoria.dica1
-const d2 = categoria.dica2
-const d3 = categoria.dica3
-const palavraSecreta = categoria.nome
+const d1 = categoria.dica1.toUpperCase()
+const d2 = categoria.dica2.toUpperCase()
+const d3 = categoria.dica3.toUpperCase()
+const palavraSecreta = categoria.nome.toUpperCase()
 
 const IdDica1 = document.querySelector("#dica1")
 const IdDica2 = document.querySelector("#dica2")

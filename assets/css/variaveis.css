@@ -1,7 +1,9 @@
 :root{
     --bg: #247881;
+    --bg-dark: #1c585f;
     --bg-light: #43919B;
     --azul-light: #91D8E4;
     --turquesa: #00FFC6;
-    --btn: #077269;
+    --btn: #00195371;
+    --btn-opc: #00195336;
 }
